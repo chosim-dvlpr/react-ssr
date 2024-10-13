@@ -201,7 +201,7 @@ eval("module.exports = __webpack_require__.p + \"images/star_empty.png\";\n\n//#
 /******/ 	
 /******/ 	/* webpack/runtime/publicPath */
 /******/ 	(() => {
-/******/ 		__webpack_require__.p = "/static/";
+/******/ 		__webpack_require__.p = "/";
 /******/ 	})();
 /******/ 	
 /************************************************************************/

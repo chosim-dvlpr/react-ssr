@@ -10,7 +10,7 @@ import { fetchMovieList } from '../../api/fetchMovieList.js';
 const router = Router();
 
 router.get('/', async (_, res) => {
-  const templatePath = path.resolve(__dirname, '../views', 'index.html');
+  const templatePath = path.resolve(__dirname, '../../views', 'index.html');
   const movies = [
     {
       adult: false,

@@ -6,6 +6,6 @@ import App from './App.jsx';
 const initialData = window.__INITIAL_DATA__ || [];
 
 hydrateRoot(
-  document.getElementById('thumbnail-list'),
+  document.getElementsByClassName('thumbnail-list'),
   <App movieList={initialData.length > 0 ? initialData : []} />
 );

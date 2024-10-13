@@ -8,10 +8,6 @@ module.exports = {
   externals: [nodeExternals()],
   resolve: {
     extensions: ['.js', '.jsx'],
-    alias: {
-      '@images': path.resolve(__dirname, 'public/images'),
-      '@styles': path.resolve(__dirname, 'public/styles'),
-    },
   },
   module: {
     rules: [
@@ -41,6 +37,6 @@ module.exports = {
   output: {
     filename: 'server.js',
     path: path.resolve(__dirname, 'dist'),
-    publicPath: '/',
+    publicPath: '/public/',
   },
 };

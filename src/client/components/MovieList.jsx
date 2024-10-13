@@ -1,5 +1,5 @@
 import React from 'react';
-import STAR_EMPTY from '@images/star_empty.png';
+import STAR_EMPTY from '/public/images/star_empty.png';
 
 function MovieList({ movieList }) {
   return (

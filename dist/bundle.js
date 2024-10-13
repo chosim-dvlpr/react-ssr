@@ -26,7 +26,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \*********************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n\nfunction MovieList(_ref) {\n  var movieList = _ref.movieList;\n  var STAR_EMPTY = '/assets/images/star_empty.png';\n  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Fragment), null, movieList.length > 0 ? movieList.map(function (_ref2) {\n    var id = _ref2.id,\n      title = _ref2.title,\n      poster_path = _ref2.poster_path,\n      vote_average = _ref2.vote_average;\n    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"li\", {\n      key: id\n    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"div\", {\n      className: \"item\"\n    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"img\", {\n      className: \"thumbnail\",\n      src: \"https://media.themoviedb.org/t/p/w440_and_h660_face/\".concat(poster_path),\n      alt: title\n    }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"div\", {\n      className: \"item-desc\"\n    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"p\", {\n      className: \"rate\"\n    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"img\", {\n      src: STAR_EMPTY,\n      className: \"star\"\n    }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"span\", null, vote_average)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"strong\", null, title))));\n  }) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"p\", null, \"No movies available\"));\n}\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (MovieList);\n\n//# sourceURL=webpack://react-ssr/./src/client/components/MovieList.jsx?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _images_star_empty_png__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @images/star_empty.png */ \"./public/images/star_empty.png\");\n\n\nfunction MovieList(_ref) {\n  var movieList = _ref.movieList;\n  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Fragment), null, movieList.length > 0 ? movieList.map(function (_ref2) {\n    var id = _ref2.id,\n      title = _ref2.title,\n      poster_path = _ref2.poster_path,\n      vote_average = _ref2.vote_average;\n    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"li\", {\n      key: id\n    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"div\", {\n      className: \"item\"\n    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"img\", {\n      className: \"thumbnail\",\n      src: \"https://media.themoviedb.org/t/p/w440_and_h660_face/\".concat(poster_path),\n      alt: title\n    }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"div\", {\n      className: \"item-desc\"\n    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"p\", {\n      className: \"rate\"\n    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"img\", {\n      src: _images_star_empty_png__WEBPACK_IMPORTED_MODULE_1__,\n      className: \"star\"\n    }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"span\", null, vote_average)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"strong\", null, title))));\n  }) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"p\", null, \"No movies available\"));\n}\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (MovieList);\n\n//# sourceURL=webpack://react-ssr/./src/client/components/MovieList.jsx?");
 
 /***/ }),
 
@@ -36,7 +36,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \****************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var react_dom_client__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom/client */ \"./node_modules/react-dom/client.js\");\n/* harmony import */ var _App_jsx__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./App.jsx */ \"./src/client/App.jsx\");\n\n\n\n\n// 서버에서 전달된 초기 데이터 가져오기\nvar initialData = window.__INITIAL_DATA__ || [];\n(0,react_dom_client__WEBPACK_IMPORTED_MODULE_1__.hydrateRoot)(document.getElementById('root'), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_App_jsx__WEBPACK_IMPORTED_MODULE_2__[\"default\"], {\n  movieList: initialData.length > 0 ? initialData : []\n}));\n\n//# sourceURL=webpack://react-ssr/./src/client/main.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var react_dom_client__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom/client */ \"./node_modules/react-dom/client.js\");\n/* harmony import */ var _App_jsx__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./App.jsx */ \"./src/client/App.jsx\");\n\n\n\n\n// 서버에서 전달된 초기 데이터 가져오기\nvar initialData = window.__INITIAL_DATA__ || [];\n(0,react_dom_client__WEBPACK_IMPORTED_MODULE_1__.hydrateRoot)(document.getElementById('thumbnail-list'), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_App_jsx__WEBPACK_IMPORTED_MODULE_2__[\"default\"], {\n  movieList: initialData.length > 0 ? initialData : []\n}));\n\n//# sourceURL=webpack://react-ssr/./src/client/main.js?");
 
 /***/ }),
 
@@ -107,6 +107,16 @@ eval("/**\n * @license React\n * scheduler.development.js\n *\n * Copyright (c) 
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 eval("\n\nif (false) {} else {\n  module.exports = __webpack_require__(/*! ./cjs/scheduler.development.js */ \"./node_modules/scheduler/cjs/scheduler.development.js\");\n}\n\n\n//# sourceURL=webpack://react-ssr/./node_modules/scheduler/index.js?");
+
+/***/ }),
+
+/***/ "./public/images/star_empty.png":
+/*!**************************************!*\
+  !*** ./public/images/star_empty.png ***!
+  \**************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"images/star_empty.png\";\n\n//# sourceURL=webpack://react-ssr/./public/images/star_empty.png?");
 
 /***/ })
 
@@ -187,6 +197,11 @@ eval("\n\nif (false) {} else {\n  module.exports = __webpack_require__(/*! ./cjs
 /******/ 			if (!module.children) module.children = [];
 /******/ 			return module;
 /******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/publicPath */
+/******/ 	(() => {
+/******/ 		__webpack_require__.p = "/static/";
 /******/ 	})();
 /******/ 	
 /************************************************************************/

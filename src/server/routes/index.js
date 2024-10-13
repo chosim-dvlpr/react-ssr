@@ -13,6 +13,7 @@ const router = Router();
 router.use('/', async (_, res) => {
   const templatePath = path.resolve(__dirname, 'index.html');
   const movieListData = await fetchMovieList(); // API 호출
+  console.log(movieListData);
   const renderedApp = renderToString(<App movieList={movieListData ?? []} />);
   const bestMovieItem =
     movieListData && movieListData.length > 0 ? movieListData[0] : {};

@@ -2,9 +2,8 @@ import React from 'react';
 import STAR_EMPTY from '@images/star_empty.png';
 
 function MovieList({ movieList }) {
-
   return (
-    <>
+    <ul class="thumbnail-list" id="thumbnail-list">
       {movieList.length > 0 ? (
         movieList.map(({ id, title, poster_path, vote_average }) => (
           <li key={id}>
@@ -27,7 +26,7 @@ function MovieList({ movieList }) {
       ) : (
         <p>No movies available</p>
       )}
-    </>
+    </ul>
   );
 }
 

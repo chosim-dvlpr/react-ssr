@@ -1,5 +1,4 @@
 import React from 'react';
-import STAR_EMPTY from '/public/images/star_empty.png';
 
 function MovieList({ movieList }) {
   return (
@@ -19,7 +18,10 @@ function MovieList({ movieList }) {
                     />
                     <div className="item-desc">
                       <p className="rate">
-                        <img src={STAR_EMPTY} className="star" />
+                        <img
+                          src={'/public/images/star_empty.png'}
+                          className="star"
+                        />
                         <span>{vote_average}</span>
                       </p>
                       <strong>{title}</strong>

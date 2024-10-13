@@ -21,7 +21,7 @@ router.get('/', async (_, res) => {
   const bestMovieItem =
     movieListData && movieListData.length > 0 ? movieListData[0] : {};
 
-  const template = fs.readFileSync(templatePath, 'utf-8');
+  let template = fs.readFileSync(templatePath, 'utf-8');
   const initData = /*html*/ `
     <script>
       window.__INITIAL_DATA__ = ${JSON.stringify(movieListData)};

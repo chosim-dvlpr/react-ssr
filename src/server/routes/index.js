@@ -6,36 +6,24 @@ import React from 'react';
 import { renderToString } from 'react-dom/server';
 import App from '../../client/App.jsx';
 import { fetchMovieList } from '../../api/fetchMovieList.js';
-import { TMDB_BANNER_URL } from '../../api/constants.js';
 
 const router = Router();
 
 router.get('/', async (_, res) => {
   const templatePath = path.resolve(__dirname, '../views', 'index.html');
-  console.log('여기');
-  console.log(templatePath);
-  console.log(__dirname);
   const movieListData = await fetchMovieList(); // API 호출
-  // console.log(movieListData);
   const renderedApp = renderToString(<App movieList={movieListData ?? []} />);
-  const bestMovieItem =
-    movieListData && movieListData.length > 0 ? movieListData[0] : {};
 
-  let template = fs.readFileSync(templatePath, 'utf-8');
   const initData = /*html*/ `
-    <script>
-      window.__INITIAL_DATA__ = ${JSON.stringify(movieListData)}
-    </script>
+  <script>
+    window.__INITIAL_DATA__ = ${JSON.stringify(movieListData)}
+  </script>
   `;
-  const renderedHTML = template
-    .replace('<!--${INIT_DATA_AREA}-->', initData)
-    .replace('<!--${MOVIE_ITEMS_PLACEHOLDER}-->', renderedApp)
-    .replace(
-      '${background-container}',
-      TMDB_BANNER_URL + bestMovieItem.backdrop_path
-    )
-    .replace('${bestMovie.rate}', bestMovieItem.vote_average)
-    .replace('${bestMovie.title}', bestMovieItem.title);
+  const template = fs.readFileSync(templatePath, 'utf-8');
+  const renderedHTML = template.replace(
+    '<div id="root"></div>',
+    `<div id="root">${renderedApp}</div>${initData}`
+  );
 
   res.send(renderedHTML);
 });

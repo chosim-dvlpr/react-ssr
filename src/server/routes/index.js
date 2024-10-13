@@ -10,11 +10,12 @@ import { TMDB_BANNER_URL } from '../../api/constants.js';
 
 const router = Router();
 
-router.use('/', async (_, res) => {
-  const templatePath = path.resolve(__dirname, '../../../views', 'index.html');
+router.get('/', async (_, res) => {
+  const templatePath = path.resolve(__dirname, 'index.html');
   console.log('여기');
+  console.log(__dirname);
   const movieListData = await fetchMovieList(); // API 호출
-  console.log(movieListData);
+  // console.log(movieListData);
   const renderedApp = renderToString(<App movieList={movieListData ?? []} />);
   const bestMovieItem =
     movieListData && movieListData.length > 0 ? movieListData[0] : {};

@@ -24,7 +24,7 @@ router.get('/', async (_, res) => {
   let template = fs.readFileSync(templatePath, 'utf-8');
   const initData = /*html*/ `
     <script>
-      window.__INITIAL_DATA__ = ${JSON.stringify(movieListData)};
+      window.__INITIAL_DATA__ = ${JSON.stringify(movieListData)}
     </script>
   `;
   const renderedHTML = template

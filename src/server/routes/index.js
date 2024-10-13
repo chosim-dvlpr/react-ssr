@@ -11,7 +11,8 @@ import { TMDB_BANNER_URL } from '../../api/constants.js';
 const router = Router();
 
 router.use('/', async (_, res) => {
-  const templatePath = path.resolve(__dirname, 'index.html');
+  const templatePath = path.resolve(__dirname, '../../../views', 'index.html');
+  console.log('여기');
   const movieListData = await fetchMovieList(); // API 호출
   console.log(movieListData);
   const renderedApp = renderToString(<App movieList={movieListData ?? []} />);

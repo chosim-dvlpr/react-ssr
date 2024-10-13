@@ -1,7 +1,7 @@
 import React from 'react';
+import STAR_EMPTY from '@images/star_empty.png';
 
 function MovieList({ movieList }) {
-  const STAR_EMPTY = '/assets/images/star_empty.png';
 
   return (
     <>
